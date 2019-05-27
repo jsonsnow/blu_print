@@ -1,0 +1,33 @@
+<page id='direction' x='0' y='0' width='74' height='160' scale='8'>
+	<layout id='派件存根'>
+		<line x='0' y='680' x1='576' y1='680' lineWidth='1' width='576' height='1'></line>
+		<line x='0' y='600' x1='576' y1='600' lineWidth='1' width='576' height='1'></line>
+		<line x='0' y='512' x1='576' y1='512' lineWidth='1' width='576' height='1'></line>
+		<line x='0' y='448' x1='576' y1='448' lineWidth='1' width='576' height='1'> </line>
+		<line x='0' y='360' x1='576' y1='360' lineWidth='1' width='576' height='1'></line>
+		<line x='42' y='360' x1='42' y1='600' lineWidth='1' width='1' height='240'></line>
+		<line x='576' y='360' x1='576' y1='680' lineWidth='1' width='1' height='320'></line>
+		<line x='2' y='360' x1='2' y1='680' lineWidth='1' width='1' height='320'></line>
+	</layout>
+
+	<layout>
+		<line x='0' y='980' x1='576' y1='980' lineWidth='1' width='576' height='1'></line>
+		<line x='0' y='892' x1='576' y1='892' lineWidth='1' width='576' height='1'></line>
+		<line x='0' y='804' x1='576' y1='804' lineWidth='1' width='576' height='1'></line>
+		<line x='576' y='804' x1='576' y1='980' lineWidth='1' width='576' height='180'></line>
+		<line x='2' y='804' x1='2' y1='980' lineWidth='1' width='576' height='180'></line>
+		<line x='42' y='804' x1='42' y1='980' lineWidth='1' width='576' height='180'></line>
+	</layout>
+
+	<layout>
+		<line x='0' y='1170' x1='576' y1='1170' lineWidth='1' width='576' height='1'></line>
+		<line x='0' y='1084' x1='576' y1='1084' lineWidth='1' width='576' height='1'></line>
+		<line x='576' y='1084' x1='576' y1='1170' lineWidth='1' width='576' height='86'></line>
+		<line x='288' y='1084' x1='288' y1='1170' lineWidth='1' width='576' height='86'></line>
+		<line x='2' y='184' x1='2' y1='1170' lineWidth='1' width='576' height='180'></line>
+	</layout>
+
+	<text x='8' y='17' xScale='2' yScale='2' id='topNum' font='TSS24.BF2'></text>
+	<text x='88' y='80' xScale='2' yScale='2' font='TSS24.BF2' cpclFont='2' value='标准快递'></text>
+	
+</page>

@@ -1,0 +1,29 @@
+! 0 200 200 630 1
+PAGE-WIDTH 470
+BOX 0 20 448 620 2
+LINE 0 92 448 92 1
+LINE 0 244 448 244 1
+LINE 0 372 448 372 1
+LINE 0 492 448 492 1
+LINE 40 244 40 492 1
+RIGHT 440
+TEXT 8 0 450 36 [courier_name]
+TEXT 8 0 450 68 [print_time]
+CENTER
+BARCODE-TEXT 8 0 10
+BARCODE 128 1 0 100 0 100 [barcode]
+BARCODE-TEXT OFF
+LEFT
+T 8 0 50 250 [receiver_name] [receiver_phone]
+T 8 0 50 279 [receiver_address1]
+T 8 0 50 311 [receiver_address2]
+T 8 0 50 343 [receiver_address3]
+T 8 0 8 266 收
+T 8 0 8 306 件
+T 8 0 8 404 发
+T 8 0 8 444 件
+T 8 0 50 380 [sender_name] [sender_phone]
+T 8 0 50 408 [sender_address1]
+T 8 0 50 436 [sender_address2]
+T 8 0 50 464 [sender_address3]
+PRINT
