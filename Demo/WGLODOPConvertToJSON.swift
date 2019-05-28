@@ -25,9 +25,36 @@ class WGLODOPConvertToJSON: NSObject {
         func getParams(with cmdLine: String) -> [String:[String: String]]? {
             switch self {
             case .LINE:
-                let res = cmdLine.match(pattern: self.rawValue)
+                var line: [String: [String: String]] = nil
+                let res = cmdLine.match(pattern: self.rawValue) { (result) in
+                    var res = [String: String]()
+                    print(result.range(at: 1))
+                    var firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 1).location)
+                    var endIndex = self.index(self.startIndex, offsetBy: result.range(at: 1).location + result.range(at: 1).length)
+                    res["y1"] = String(self[firstIndex ..< endIndex])
+                    
+                    firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 2).location)
+                    endIndex = self.index(self.startIndex, offsetBy: result.range(at: 2).location + result.range(at: 2).length)
+                    res["x1"] = String(self[firstIndex ..< endIndex])
+                    
+                    firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 3).location)
+                    endIndex = self.index(self.startIndex, offsetBy: result.range(at: 3).location + result.range(at: 3).length)
+                    res["y"] = String(self[firstIndex ..< endIndex])
+                    firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 4).location)
+                    endIndex = self.index(self.startIndex, offsetBy: result.range(at: 4).location + result.range(at: 4).length)
+                    res["x"] = String(self[firstIndex ..< endIndex])
+                    
+                    firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 5).location)
+                    endIndex = self.index(self.startIndex, offsetBy: result.range(at: 5).location + result.range(at: 5).length)
+                    res["null"] = String(self[firstIndex ..< endIndex])
+                    
+                    firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 6).location)
+                    endIndex = self.index(self.startIndex, offsetBy: result.range(at: 6).location + result.range(at: 6).length)
+                    res["width"] = String(self[firstIndex ..< endIndex])
+                    return ["line": res]
+                }
                 print(res ?? [String:[String: String]]())
-                return res
+                return line
             default:
                 return nil
             }
@@ -102,40 +129,14 @@ class WGLODOPConvertToJSON: NSObject {
 }
 
 extension String {
-    func match(pattern: String) -> [String:[String: String]]? {
+    typealias WGMatchCallback = (_ result: NSTextCheckingResult?) -> Void
+    func match(pattern: String, callback: WGMatchCallback) -> Void {
         do {
             let regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
             let matches = regex.matches(in: self, options: [], range: NSRange.init(location: 0, length: self.utf16.count))
-            return matches.map { (result) -> [String: [String: String]] in
-                var res = [String: String]()
-                print(result.range(at: 1))
-                var firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 1).location)
-                var endIndex = self.index(self.startIndex, offsetBy: result.range(at: 1).location + result.range(at: 1).length)
-                res["y1"] = String(self[firstIndex ..< endIndex])
-                
-                firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 2).location)
-                endIndex = self.index(self.startIndex, offsetBy: result.range(at: 2).location + result.range(at: 2).length)
-                res["x1"] = String(self[firstIndex ..< endIndex])
-                
-                firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 3).location)
-                endIndex = self.index(self.startIndex, offsetBy: result.range(at: 3).location + result.range(at: 3).length)
-                res["y"] = String(self[firstIndex ..< endIndex])
-                firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 4).location)
-                endIndex = self.index(self.startIndex, offsetBy: result.range(at: 4).location + result.range(at: 4).length)
-                res["x"] = String(self[firstIndex ..< endIndex])
-                
-                firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 5).location)
-                endIndex = self.index(self.startIndex, offsetBy: result.range(at: 5).location + result.range(at: 5).length)
-                res["null"] = String(self[firstIndex ..< endIndex])
-                
-                firstIndex = self.index(self.startIndex, offsetBy: result.range(at: 6).location)
-                endIndex = self.index(self.startIndex, offsetBy: result.range(at: 6).location + result.range(at: 6).length)
-                res["width"] = String(self[firstIndex ..< endIndex])
-                return ["line": res]
-            }.first
+            callback(matches.first)
         } catch  {
             print("\(error)")
-            return nil
         }
     }
 }
