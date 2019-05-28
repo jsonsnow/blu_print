@@ -50,7 +50,7 @@
     NSString *miniPath = [[NSBundle mainBundle] pathForResource:@"liantu" ofType:@"png"];
     NSData *data = [NSData dataWithContentsOfFile:miniPath];
     NSString *res = [WGPrintDataManager.print convertDataToBase64:data];
-    [WGLODOPConvertToJSON parseTxtWithFileName:@"韵达宽76高159"];
+   
     //NSLog(@"%@", res);
     //Manager.bleConnecter
 }
@@ -441,6 +441,7 @@
     WGTSPLPrintCommand *cmd = [[WGTSPLPrintCommand alloc] init];
     NSData *data = [cmd cmdTtpe];
     NSString *hex = [HexData hexStringWithData:data];
+    [WGLODOPConvertToJSON parseTxtWithFileName:@"韵达宽76高159"];
     
 }
 
