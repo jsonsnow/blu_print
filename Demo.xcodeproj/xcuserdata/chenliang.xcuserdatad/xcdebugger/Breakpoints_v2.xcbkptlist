@@ -28,7 +28,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Demo/CtrlViewController.m"
-            timestampString = "580740971.901822"
+            timestampString = "580815460.9849581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "365"
@@ -44,12 +44,12 @@
                   moduleName = "Demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chenliang/Desktop/wego/Demo/Demo/CtrlViewController.m"
-                  timestampString = "580740971.926187"
+                  timestampString = "580824145.252866"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "365"
                   endingLineNumber = "365"
-                  offsetFromSymbolStart = "642">
+                  offsetFromSymbolStart = "588">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -59,12 +59,12 @@
                   moduleName = "Demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chenliang/Desktop/wego/Demo/Demo/CtrlViewController.m"
-                  timestampString = "580740971.9283071"
+                  timestampString = "580824145.254499"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "366"
                   endingLineNumber = "366"
-                  offsetFromSymbolStart = "27">
+                  offsetFromSymbolStart = "28">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -74,12 +74,12 @@
                   moduleName = "Demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chenliang/Desktop/wego/Demo/Demo/CtrlViewController.m"
-                  timestampString = "580740971.93012"
+                  timestampString = "580824145.255952"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "365"
                   endingLineNumber = "365"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>

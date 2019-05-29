@@ -441,7 +441,22 @@
     WGTSPLPrintCommand *cmd = [[WGTSPLPrintCommand alloc] init];
     NSData *data = [cmd cmdTtpe];
     NSString *hex = [HexData hexStringWithData:data];
-    [WGLODOPConvertToJSON parseTxtWithFileName:@"韵达宽76高159"];
+    
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"zhongtong" ofType:@"xml"];
+    NSData *xmlData = [[NSData alloc] initWithContentsOfFile:xmlPath];
+    
+    NSString *jsonFilePath = [[NSBundle mainBundle] pathForResource:@"josn" ofType:@"json"];
+    NSData *jsonData = [NSData dataWithContentsOfFile:jsonFilePath];
+    Manager.bleConnecter.readData = ^(NSData * _Nullable data) {
+        
+    };
+    NSData *queryData = [WGPrintDataManager.print getQueryPrintStatusData:[JSONUtils dictWithData:jsonData]];
+    NSArray *model = [WGLODOPConvertToJSON parseTxtWithFileName:@"中通电子面单网点两联1.0"];
+    NSArray <NSString *> *iden = [WGPrintDataManager.print printIdentifers:[JSONUtils dictWithData:jsonData]];
+     NSArray <NSData *> *datas = [WGPrintDataManager.print getPrintDataWithJson:[JSONUtils dictWithData:jsonData] xmlAttri:model];
+    [WGPrintQueue.printQueue printDatas:datas identifiles:iden callback:^(NSString * _Nonnull state, NSInteger cur, NSInteger total, NSString * _Nonnull ide) {
+        NSLog(@"state:%@, cur: %ld, total: %ld, ide: %@", state, (long)cur, (long)total, ide);
+    } queryData:queryData type:@"tspl"];
     
 }
 

@@ -9,8 +9,8 @@
 import Foundation
 
 func converStringToInt32(_ str: String?, defualt: Int32? = 0) -> Int32 {
-    if let _str = str, let res = Int32(_str) {
-        return res
+    if let _str = str, let res = Float(_str) {
+        return Int32(res)
     }
     if let res = defualt {
         return res

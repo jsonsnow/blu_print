@@ -31,6 +31,9 @@
 		BA5677EE228BFEF200281F2C /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5677ED228BFEF200281F2C /* View.xib */; };
 		BA5677F1228C0CB100281F2C /* WGPrintQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5677EF228C0CB100281F2C /* WGPrintQueue.swift */; };
 		BA5677F2228C0CB100281F2C /* WGPrintOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5677F0228C0CB100281F2C /* WGPrintOperation.swift */; };
+		BA61DB2D229E7413005EBD6A /* 中通电子面单网点两联1.txt in Resources */ = {isa = PBXBuildFile; fileRef = BA61DB2C229E7412005EBD6A /* 中通电子面单网点两联1.txt */; };
+		BA61DB2F229E748A005EBD6A /* 中通电子面单网点两联1(1).txt in Resources */ = {isa = PBXBuildFile; fileRef = BA61DB2E229E748A005EBD6A /* 中通电子面单网点两联1(1).txt */; };
+		BA61DB31229E7E16005EBD6A /* 中通电子面单网点两联1.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = BA61DB30229E7E16005EBD6A /* 中通电子面单网点两联1.0.txt */; };
 		BA808C022296C1360067AC2D /* BleDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA808C002296C1360067AC2D /* BleDeviceManager.m */; };
 		BA871ABF2276963200209EAB /* TscCommand+WGTSPLYunDaCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA871ABE2276963200209EAB /* TscCommand+WGTSPLYunDaCategory.m */; };
 		BA8959E02269ADCE0030CD99 /* 1541555329837_.pic_hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA8959DF2269ADCE0030CD99 /* 1541555329837_.pic_hd.jpg */; };
@@ -109,6 +112,9 @@
 		BA5677ED228BFEF200281F2C /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		BA5677EF228C0CB100281F2C /* WGPrintQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGPrintQueue.swift; sourceTree = "<group>"; };
 		BA5677F0228C0CB100281F2C /* WGPrintOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGPrintOperation.swift; sourceTree = "<group>"; };
+		BA61DB2C229E7412005EBD6A /* 中通电子面单网点两联1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "中通电子面单网点两联1.txt"; sourceTree = "<group>"; };
+		BA61DB2E229E748A005EBD6A /* 中通电子面单网点两联1(1).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "中通电子面单网点两联1(1).txt"; sourceTree = "<group>"; };
+		BA61DB30229E7E16005EBD6A /* 中通电子面单网点两联1.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "中通电子面单网点两联1.0.txt"; sourceTree = "<group>"; };
 		BA808C002296C1360067AC2D /* BleDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleDeviceManager.m; sourceTree = "<group>"; };
 		BA808C012296C1360067AC2D /* BleDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDeviceManager.h; sourceTree = "<group>"; };
 		BA871ABD2276963200209EAB /* TscCommand+WGTSPLYunDaCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TscCommand+WGTSPLYunDaCategory.h"; sourceTree = "<group>"; };
@@ -232,8 +238,11 @@
 				0789F29C20FD830300BF7640 /* ConnecterManager.m */,
 				0789F29E20FD830400BF7640 /* CtrlViewController.h */,
 				0789F29D20FD830400BF7640 /* CtrlViewController.m */,
+				BA61DB30229E7E16005EBD6A /* 中通电子面单网点两联1.0.txt */,
 				BA9ADD68228155FB0085701E /* JSONUtils.h */,
 				BA9ADD67228155FA0085701E /* JSONUtils.m */,
+				BA61DB2E229E748A005EBD6A /* 中通电子面单网点两联1(1).txt */,
+				BA61DB2C229E7412005EBD6A /* 中通电子面单网点两联1.txt */,
 				BA4B0007229BBFC7007DCBB5 /* 韵达宽76高159.txt */,
 				BA4B0005229BBA65007DCBB5 /* WGLODOPConvertToJSON.swift */,
 				BA871AC02276981B00209EAB /* WGPrintHeaderFile.h */,
@@ -357,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9ADD64228154A30085701E /* yunda.xml in Resources */,
+				BA61DB31229E7E16005EBD6A /* 中通电子面单网点两联1.0.txt in Resources */,
 				0789F28520FD826C00BF7640 /* LaunchScreen.storyboard in Resources */,
 				BAFEFE42228449B600FB27FA /* 1621557395876_.pic_thumb.jpg in Resources */,
 				BAFEFE3E2284316600FB27FA /* 1621557395876_.pic.jpg in Resources */,
@@ -368,6 +378,7 @@
 				BA4B0008229BBFC7007DCBB5 /* 韵达宽76高159.txt in Resources */,
 				BA9ADD66228155130085701E /* josn.json in Resources */,
 				BAF055AB2297A48900414E92 /* yunda74.xml in Resources */,
+				BA61DB2F229E748A005EBD6A /* 中通电子面单网点两联1(1).txt in Resources */,
 				BA8959E02269ADCE0030CD99 /* 1541555329837_.pic_hd.jpg in Resources */,
 				BAFEFE4622850FAE00FB27FA /* zhongtong.xml in Resources */,
 				0789F28020FD826C00BF7640 /* Main.storyboard in Resources */,
@@ -375,6 +386,7 @@
 				BA9ADD6F22816CC80085701E /* test.xml in Resources */,
 				0789F2AE20FD830A00BF7640 /* SVProgressHUD.bundle in Resources */,
 				BAFEFE3C228403DC00FB27FA /* esc.json in Resources */,
+				BA61DB2D229E7413005EBD6A /* 中通电子面单网点两联1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
